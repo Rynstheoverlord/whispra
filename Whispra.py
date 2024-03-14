@@ -10,7 +10,7 @@ db = TinyDB("messages.json")
 data = Query()
 
 st.markdown("""
-# Converse
+# Whispra
 developer email: rynstheoverlord@gmail.com
 """)
 
