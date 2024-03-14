@@ -10,7 +10,6 @@ db = TinyDB("messages.json")
 data = Query()
 
 st.markdown("""
-# Whispra
 developer email: rynstheoverlord@gmail.com
 """)
 
@@ -40,7 +39,7 @@ def render_messages():
 
 
 
-st.title("Converse")
+st.title("Whispra")
 st.write("Anonymous chatting...")
 
 
@@ -61,6 +60,7 @@ if user_message:
 
 
 if auto_refresh:
+  render_messages()
   refresh_count = st_autorefresh(interval=1000, key="chatmessagecounter")
   st.button("Refresh", disabled=True)
 
@@ -68,3 +68,4 @@ else:
   if st.button("Refresh"):
     render_messages()
     st.toast("Refreshed!")
+
